@@ -1,0 +1,49 @@
+﻿<Window x:Class="FuelStation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FuelStation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+            <TextBlock Text="Бензины" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Blue" Height="30"/>
+            <Button x:Name="fuel80" Height="90" Width="90" BorderBrush="White" Content="A-80" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 30 0 0" Click="Fuel80Click"/>
+            <Button x:Name="fuel92" Height="90" Width="90" BorderBrush="White" Content="A-92" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="Fuel92Click"/>
+            <Button x:Name="fuel95" Height="90" Width="90" BorderBrush="White" Content="A-95" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="Fuel95Click"/>
+            <Button x:Name="fuel98" Height="90" Width="90" BorderBrush="White" Content="E-98" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="Fuel98Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock Text="Еда" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Blue" Height="30"/>
+            <Button x:Name="orbit" Height="90" Width="90" BorderBrush="White" Content="Orbit" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 30 0 0" Click="OrbitClick"/>
+            <Button x:Name="dirol" Height="90" Width="90" BorderBrush="White" Content="Dirol" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="DirolClick"/>
+            <Button x:Name="flint" Height="90" Width="90" BorderBrush="White" Content="Flint" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="FlintClick"/>
+            <Button x:Name="lays" Height="90" Width="90" BorderBrush="White" Content="Lays" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="LaysClick"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.ColumnSpan="2" Margin="266,0,0,0" Grid.RowSpan="2">
+            <TextBlock Text="Напитки" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Blue" Height="30"/>
+            <Button x:Name="j7"       Height="90" Width="90" BorderBrush="White" Content="J7" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 30 0 0" Click="J7Click"/>
+            <Button x:Name="gorilla"  Height="90" Width="90" BorderBrush="White" Content="Gorilla" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="Gorilla"/>
+            <Button x:Name="cocaCola" Height="90" Width="90" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="CocaColaClick">
+                <TextBlock Text="Coca Cola" TextWrapping="Wrap" />
+            </Button>
+            <Button x:Name="fanta"    Height="90" Width="90" BorderBrush="White" Content="Fanta" Foreground="White" FontWeight="Bold" FontSize="20" Background="Blue" Margin="0 10 0 0" Click="FantaClick"/>
+        </StackPanel>
+
+        <TextBox x:Name="count" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Введите количество" GotFocus="ClickDelete" FontSize="20" Padding="0 5 0 0" Width="700" HorizontalAlignment="Left"/>
+        <Button x:Name="cost" Content="Оплатить" HorizontalAlignment="Right" Click="ToPayProducts" Grid.Row="1" Grid.Column="2" Width="100" FontSize="15" Background="Blue" Foreground="White"/>
+    </Grid>
+</Window>

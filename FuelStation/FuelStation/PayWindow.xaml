@@ -1,0 +1,25 @@
+﻿<Window x:Class="FuelStation.PayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FuelStation"
+        mc:Ignorable="d"
+        Title="PayWindow" Height="450" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="tableItem" Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="100"/>
+                <DataGridTextColumn Header="Count" Binding="{Binding Count}" Width="100"/>
+                <DataGridTextColumn Header="Total" Binding="{Binding Total}" Width="100"/>
+                <DataGridTextColumn Header="All Sum" Binding="{Binding totalSum}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Оплатить" Background="Blue" Foreground="White" Grid.Row="1" Click="SuccesfulEnd"/>
+    </Grid>
+</Window>
